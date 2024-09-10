@@ -1,3 +1,3 @@
-docker build --platform linux/amd64 -t actionx-be ../
-docker tag actionx-be lekhacthanhtung/actionx-be
-docker push lekhacthanhtung/actionx-be
+docker build --platform linux/amd64 -t actionx-movement-be ../
+docker tag actionx-movement-be lekhacthanhtung/actionx-movement-be
+docker push lekhacthanhtung/actionx-movement-be

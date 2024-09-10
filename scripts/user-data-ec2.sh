@@ -1,6 +1,6 @@
 sudo apt-get update
 
-sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
+sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release -y
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
@@ -12,7 +12,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic test"
 
 sudo apt update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
 sudo docker run -d -p 80:80 -p 443:443 --name nginx-proxy --privileged=true \
   -e ENABLE_IPV6=true \
@@ -33,9 +33,9 @@ sudo docker run -d --privileged=true \
 
 # Production
 sudo docker run -it -d \
-  --name actionx-be \
-  -e VIRTUAL_HOST="server.actionxapt.com" \
+  --name actionx-movement-be \
+  -e VIRTUAL_HOST="movement.actionxapt.com" \
   -e VIRTUAL_PORT=80 \
-  -e LETSENCRYPT_HOST="server.actionxapt.com" \
+  -e LETSENCRYPT_HOST="movement.actionxapt.com" \
   -e LETSENCRYPT_EMAIL="weminal@gmail.com" \
-  lekhacthanhtung/actionx-be
+  lekhacthanhtung/actionx-movement-be
