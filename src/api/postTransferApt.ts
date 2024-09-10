@@ -16,7 +16,11 @@ export async function postTransferMove(
   try {
     const amount = req.body.amount || req.query.amount;
     const { toAddress } = req.body;
-    const config = new AptosConfig({ network: Network.TESTNET });
+    const config = new AptosConfig({ 
+      network: Network.DEVNET,
+      fullnode: 'https://devnet.suzuka.movementnetwork.xyz/v1',
+      faucet: 'https://faucet.devnet.suzuka.movementnetwork.xyz',
+     });
     const aptos = new Aptos(config);
     const APTOS_COIN = "0x1::aptos_coin::AptosCoin";
 
