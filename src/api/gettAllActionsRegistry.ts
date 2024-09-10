@@ -8,19 +8,19 @@ export async function gettAllActionsRegistry(
     const payload = {
       actions: [
         {
-          host: "server.actionxapt.com",
+          host: "socialmove.weminal.com",
           state: "trusted",
         },
       ],
       websites: [
         {
-          host: "server.actionxapt.com",
+          host: "socialmove.weminal.com",
           state: "trusted",
         },
       ],
       interstitials: [
         {
-          host: "server.actionxapt.com",
+          host: "socialmove.weminal.com",
           state: "trusted",
         },
       ],
