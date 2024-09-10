@@ -34,8 +34,8 @@ sudo docker run -d --privileged=true \
 # Production
 sudo docker run -it -d \
   --name actionx-movement-be \
-  -e VIRTUAL_HOST="movement.actionxapt.com" \
+  -e VIRTUAL_HOST="socialmove.weminal.com" \
   -e VIRTUAL_PORT=80 \
-  -e LETSENCRYPT_HOST="movement.actionxapt.com" \
+  -e LETSENCRYPT_HOST="socialmove.weminal.com" \
   -e LETSENCRYPT_EMAIL="weminal@gmail.com" \
   lekhacthanhtung/actionx-movement-be
